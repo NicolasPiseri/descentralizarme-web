@@ -1,3 +1,10 @@
+/* ----- ALL ----- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: #272727;
@@ -5,10 +12,14 @@ body {
     color: #fff;
 }
 
-/* NAV */
+/* ----- NAV ----- */
+
+header {
+    background-color: #181818;
+}
 
 .navbar {
-    background-color: #181818;
+    background-color: transparent;
 }
 
 .navbar-brand {
@@ -24,7 +35,11 @@ body {
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 }
 
-/* MAIN */
+/* ----- MAIN ----- */
+
+main{
+    width: 100vw;
+}
 
 .subtitle {
     margin: 0;
@@ -63,7 +78,7 @@ img {
     width: 100%;
 }
 
-/* FOOTER */
+/* ----- FOOTER ----- */
 
 footer {
     background-color: #181818;
