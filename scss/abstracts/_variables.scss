@@ -1,3 +1,10 @@
 $color-principal: #181818;
 $color-secundario: #272727;
 $color-terciario: #ff9900;
+
+@mixin d-flex($column, $justify, $align){
+    display: flex;
+    flex-direction: $column;
+    justify-content: $justify;
+    align-items: $align;
+    }

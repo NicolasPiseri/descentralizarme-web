@@ -4,81 +4,161 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #181818;
-}
-header .navbar {
-  background-color: transparent;
-}
-header .navbar .navbar-brand {
-  transition: all 0.3s ease;
-  color: #ff9900;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-header .navbar .navbar-brand:hover {
-  color: #ff9900;
-  transform: scale(1.01);
-  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+html {
+  font-family: "Nunito", sans-serif;
 }
 
 body {
   background-color: #272727;
-  font-family: "Nunito", sans-serif;
   color: #fff;
 }
 
-main {
-  width: 100vw;
+ul {
+  list-style: none;
 }
-main .subtitle {
-  margin: 0;
-  padding: 1.5rem 0;
-  font-size: 1.5rem;
-  text-align: center;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
-main article {
-  transition: all 0.3s ease;
+
+/* Header */
+header {
   background-color: #181818;
-  border-radius: 0.5rem;
-  margin: 0 0.5rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-main article:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #ff9900;
+  margin: 0.5rem 0;
 }
-main article h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 0.25rem;
+header h1 a {
+  color: #ff9900;
 }
-main article p {
-  font-size: 1rem;
-  font-weight: 200;
-  padding: 0.25rem;
-}
-main article img {
+
+nav {
+  margin: 0.5rem 0;
   width: 100%;
 }
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li a {
+  transition: all 0.2s ease;
+  color: rgba(255, 255, 255, 0.85);
+}
+nav ul li a:hover {
+  padding: 0 0.5rem;
+  color: #fff;
+  border-left: 0.15rem solid rgba(255, 255, 255, 0.1);
+  border-right: 0.15rem solid rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 1px 0px #000;
+  font-weight: 600;
+}
 
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main h2 {
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  margin: 0.5rem 0;
+}
+main section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section article {
+  transition: all 0.3s ease;
+  background-color: #181818;
+  width: 90vw;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+main section article h3 {
+  font-size: 1.2rem;
+}
+main section article img {
+  width: 100%;
+}
+main section article h3, main section article p {
+  margin: 0.5rem;
+}
+main section article:hover {
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
 footer {
   background-color: #181818;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
 }
-footer a {
-  transition: all 0.15s ease-in-out;
-  color: rgba(255, 255, 255, 0.55);
-  text-decoration: none;
-  margin-bottom: 0;
-  padding: 1rem 0;
+footer p, footer a {
+  margin: 0 0.5rem;
 }
-footer a:hover {
-  color: #fff;
+
+@media (min-width: 820px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  header nav {
+    width: 50%;
+    padding-top: 10px;
+  }
+  .section-main {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 400px 400px 400px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .section-main article {
+    height: 400px;
+  }
+  .section-main article, .section-main img {
+    width: 100%;
+  }
 }
-footer p {
-  margin-bottom: 0;
-  padding: 1rem 0;
+@media (min-width: 1220px) {
+  header {
+    justify-content: space-between;
+  }
+  header h1 {
+    margin-left: 2rem;
+    text-align: start;
+  }
+  header nav {
+    width: 30%;
+  }
+  .section-main {
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

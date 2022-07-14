@@ -1,0 +1,40 @@
+@media (min-width: 820px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        nav {
+            width: 50%;
+            padding-top: 10px;
+        }
+    }
+    .section-main {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 400px 400px 400px;
+        gap: 10px;
+        justify-content: center;
+        article {
+            height: 400px;
+        }
+        article, img {
+            width: 100%;
+        }
+    }
+    }
+
+@media (min-width: 1220px) {
+    header {
+        justify-content: space-between;
+        h1 {
+            margin-left: 2rem;
+            text-align: start;
+        }
+        nav {
+            width: 30%;
+        }
+    }
+    .section-main {
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 400px 400px;
+    }
+}

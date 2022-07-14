@@ -1,21 +1,37 @@
+/* Header */
 header {
     background-color: $color-principal;
-    .navbar {
-        background-color: transparent;
-        .navbar-brand {
-            transition: all 0.3s ease;
+    @include d-flex (column,center,center);
+    padding: 0.5rem;
+    margin-bottom: 0.5rem; 
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        color: $color-terciario;
+        margin: 0.5rem 0;
+        a {
             color: $color-terciario;
-            font-size: 1.5rem;
-            font-weight: 700;
-            &:hover {
-                color: $color-terciario;
-                transform: scale(1.01);
-                text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-            }
         }
-        
     }
 }
-
-
-
+nav {
+    margin: 0.5rem 0;
+    width: 100%;
+    ul {
+        @include d-flex (row,space-around,center);
+        li {
+            a {
+                transition: all 0.2s ease;
+                color: rgba($color: #fff, $alpha: 0.85);
+                &:hover {
+                    padding: 0 0.5rem;
+                    color: #fff;
+                    border-left: 0.15rem solid rgba($color: #fff, $alpha: 0.10);
+                    border-right: 0.15rem solid rgba($color: #fff, $alpha: 0.10);
+                    text-shadow: 1px 1px 0px #000;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

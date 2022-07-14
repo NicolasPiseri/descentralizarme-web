@@ -1,17 +1,8 @@
 footer {
     background-color: $color-principal;
-    a {
-        transition: all 0.15s ease-in-out;
-        color: rgba(255, 255, 255, 0.55);
-        text-decoration: none;
-        margin-bottom: 0;
-        padding: 1rem 0;
-        &:hover {
-            color: #fff;
-        }
-    }
-    p {
-        margin-bottom: 0;
-        padding: 1rem 0;
+    padding: 1rem;
+    @include d-flex (row,end,center);
+    p, a {
+        margin: 0 0.5rem;
     }
 }
