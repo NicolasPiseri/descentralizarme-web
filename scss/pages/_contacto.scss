@@ -1,0 +1,61 @@
+form {
+    @include d-flex (column,center,center);
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    background: rgba($color: #000000, $alpha: 0.4);
+    padding: 1rem;
+    border-radius: 1rem;
+    h2 {
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        font-size: 2rem;
+    }
+    input, textarea {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+    }
+    textarea {
+        min-height: 100px;
+        max-height: 200px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    #boton {
+        background: #282828;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        padding: 1rem 0;
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 5px #000000;
+            border: #ff9900 solid 1px;
+        }
+        margin: 0.5rem 0;
+    }
+    ul {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+        color: rgba($color: #fff, $alpha: 0.5);
+        list-style: outside;
+        li {
+            margin: 0.5rem;
+        }
+    }
+    .motivo {
+        width: 100%;
+        @include d-flex (row,space-around,center);
+        div {
+            padding: 0;
+        }
+        input, label {
+            width: auto;
+            cursor: pointer;
+            margin: 0;
+        }
+    }
+}

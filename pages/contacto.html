@@ -1,48 +1,111 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Información de contacto de Descentralizarme">
+    <!--META-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Blog Crypto donde encontrarás novedades sobre el mundo de las criptomonedas y las últimas tecnologías, articulos informativos y tutoriales. Aprende sobre Bitcoin y Blockchain.">
     <meta name="owner" content="Nicolas Piseri">
-    <!--- Google Fonts - Nunito --->
+    <!--GOOGLE FONTS NUNITO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!--- CSS --->
-    <link rel="stylesheet" href="../css/main.css">
-    <title>Descentralizarme | Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!--CSS-->
+	<link rel="stylesheet" href="../css/main.css">
+	<title>Contacto - Descentralizarme</title>
 </head>
 <body>
-  <!----- HEADER ----->
-  <header>
-    <h1 class="title"><a href="../index.html" class="title">Descentralizarme</a></h1>
-        <nav class="nav-header">
-            <ul class="nav-menu">
-                <li>
-                    <a href="./articulos.html">Articulos</a>
-                </li>
-                <li>
-                    <a href="./exchanges.html">Exchanges</a>
-                </li>
-                <li>
-                    <a href="./wallets.html">Wallets</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-  </header>
-  <!----- MAIN ----->
-  <main class="container">
-      <h2 class="subtitle">Contacto</h2>
-  </main>
-  <!----- FOOTER ----->
-  <footer>
-    <a href="./contacto.html">Contacto</a>
-    <p>Copyright 2022</p>
-  </footer>
+    <!--CONTENEDOR-->
+	<div class="contenedor">
+        <!--HEADER-->
+		<header class="header">
+			<h1><a href="../index.html">Descentralizarme</a></h1>
+            <nav>
+                <ul>
+                    <li>
+                          <a href="./articulos.html">Articulos</a>
+                    </li>
+                    <li>
+                          <a href="./exchanges.html">Exchanges</a>
+                    </li>
+                    <li>
+                          <a href="./wallets.html">Wallets</a>
+                    </li>
+                    <li>
+                          <input id="search" type="search" name="search" placeholder="Palabra Clave">
+                          <button id="btn">Buscar</button>
+                    </li>
+                </ul>
+            </nav>
+		</header>
+        <!--CONTENIDO-->
+		<main class="contenido">
+            <form action="">
+                <h2 class="subtitle">Contacto</h2>
+                <p>¿Cómo podemos ayudarte?</p>
+                <ul>
+                  <li>Para enviar tips de noticias, introducir reclamos o dar sugerencias sobre el contenido de Descentralizarme, selecciona Redacción.</li>
+                  <li>Para información sobre contenidos y espacios publicitarios, selecciona Publicidad.</li>
+                  <li>Para reportar errores, mal funcionamiento o sugerir mejoras selecciona Tecnología.</li>
+                </ul>
+                <p>Motivo de su contacto:</p>
+                <div class="motivo">
+                  <div>
+                    <input id="redaccion" type="radio" name="motivo">
+                    <label for="redaccion">Redacción</label>
+                  </div>
+                  <div>
+                    <input id="publicidad" type="radio" name="motivo">
+                    <label for="publicidad">Publicidad</label>
+                  </div>
+                  <div>
+                    <input id="tecnologia" type="radio" name="motivo">
+                    <label for="tecnologia">Tecnología</label>
+                  </div>
+                  <div>
+                    <input id="otro" type="radio" name="motivo">
+                    <label for="otro">Otro</label>
+                  </div>
+                </div>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
+                <input type="email" name="coreo" id="correo" placeholder="Ingrese su Correo">
+                <textarea name="mensaje" id="" cols="40" rows="8" placeholder="Escriba su Mensaje"></textarea>
+                <input type="submit" value="Enviar" id="boton">
+              </form>
+		</main>
+        <!--ELEMENTOS-->
+		<aside class="sidebar">
+			<h3>Entradas Recientes</h3>
+            <section class="section">
+                <article>
+                    <h3>¿Qué es Lemon Cash?</h3>
+                    <img src="../img/lemoncash.jpg" alt="Lemon Cash Crypto Exchange">
+                </article>
+                <article>
+                    <h3>¿Cómo funciona Bitcoin?</h3>
+                    <img src="../img/bitcoin.jpg" alt="Bitcoin Criptomoneda">
+                </article>
+                <article>
+                    <h3>¿Cómo operar en Binance?</h3>
+                    <img src="../img/binance.jpg" alt="Binance Crypto Exchange">
+                </article>
+                <article>
+                    <h3>¿Qué es un exchange?</h3>
+                    <img src="../img/exchange.jpg" alt="Crypto Exchange">
+                </article>
+            </section>
+		</aside>
+		<div class="widget-1">
+			<h3>BITCOIN</h3>
+		</div>
+		<div class="widget-2">
+			<h3>ETHEREUM</h3>
+		</div>
+        <!--FOOTER-->
+		<footer class="footer">
+            <a href="./contacto.html">Contacto</a>
+          </footer>
+	</div>
 </body>
-</html>
+</html> 

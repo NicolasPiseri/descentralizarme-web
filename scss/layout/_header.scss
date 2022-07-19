@@ -1,37 +1,51 @@
-/* Header */
-header {
-    background-color: $color-principal;
-    @include d-flex (column,center,center);
-    padding: 0.5rem;
-    margin-bottom: 0.5rem; 
+.contenedor .header {
+    background: #181818;
+    color: #fff;
+    grid-area: header;
+    @include d-flex (row,space-between,center);
     h1 {
-        text-align: center;
-        font-size: 2rem;
-        color: $color-terciario;
-        margin: 0.5rem 0;
         a {
-            color: $color-terciario;
+            color: #ff9900;
+            font-size: 2rem;
+            font-weight: 800;
         }
     }
-}
-nav {
-    margin: 0.5rem 0;
-    width: 100%;
-    ul {
-        @include d-flex (row,space-around,center);
-        li {
-            a {
-                transition: all 0.2s ease;
-                color: rgba($color: #fff, $alpha: 0.85);
+    nav {
+        width: 80%;
+        max-width: 500px;
+        ul {
+            @include d-flex (row,space-around,center);
+        }
+        a {
+            transition: all 0.2s ease-in-out;
+                font-size: 1rem;
+                color: rgba($color: #fff, $alpha: 0.90);
                 &:hover {
                     padding: 0 0.5rem;
                     color: #fff;
-                    border-left: 0.15rem solid rgba($color: #fff, $alpha: 0.10);
-                    border-right: 0.15rem solid rgba($color: #fff, $alpha: 0.10);
+                    border-left: 3px solid rgba($color: #fff, $alpha: 0.10);
+                    border-right: 3px solid rgba($color: #fff, $alpha: 0.10);
                     text-shadow: 1px 1px 0px #000;
                     font-weight: 600;
                 }
+        }
+        #search, #btn {
+            padding: 2px;
+            font-weight: 600;
+            border: none;
+            &:hover {
+                background-color: rgba($color: #fff, $alpha: 1);
+                border: none;
             }
+            &:focus {
+                outline: none;
+            }
+        }
+        #btn {
+            transition: all 0.2s ease-in-out;
+            background-color: rgba($color: #fff, $alpha: 0.90);
+            cursor: pointer;
+            border: none;
         }
     }
 }

@@ -1,8 +1,9 @@
-footer {
-    background-color: $color-principal;
-    padding: 1rem;
-    @include d-flex (row,end,center);
-    p, a {
-        margin: 0 0.5rem;
+.contenedor .footer {
+    background: #181818;
+    color: #fff;
+    grid-area: footer;
+    a {
+        font-size: 1rem;
+        font-weight: 600;
     }
 }
