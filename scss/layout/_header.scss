@@ -1,51 +1,74 @@
-.contenedor .header {
-    background: #181818;
-    color: #fff;
-    grid-area: header;
-    @include d-flex (row,space-between,center);
-    h1 {
-        a {
-            color: #ff9900;
-            font-size: 2rem;
-            font-weight: 800;
+.contenedor {
+    .header {
+        background: $color-principal;
+        grid-area: header;
+        @include d-flex (column, center, center);
+
+        h1 {
+            a {
+                text-align: center;
+                color: $color-terciario;
+                font-size: 2rem;
+                font-weight: 600;
+            }
         }
-    }
-    nav {
-        width: 80%;
-        max-width: 500px;
-        ul {
-            @include d-flex (row,space-around,center);
-        }
-        a {
-            transition: all 0.2s ease-in-out;
-                font-size: 1rem;
-                color: rgba($color: #fff, $alpha: 0.90);
-                &:hover {
-                    padding: 0 0.5rem;
-                    color: #fff;
-                    border-left: 3px solid rgba($color: #fff, $alpha: 0.10);
-                    border-right: 3px solid rgba($color: #fff, $alpha: 0.10);
-                    text-shadow: 1px 1px 0px #000;
-                    font-weight: 600;
+
+        nav {
+            width: 100%;
+            max-width: 555px;
+
+            ul {
+                @include d-flex (column, center, center);
+            }
+
+            li {
+                padding: 0.25rem 0;
+
+                a {
+                    transition: all 0.2s ease-in-out;
+                    font-size: 1rem;
+                    color: rgba($color: #fff, $alpha: 0.90);
+
+                    &:hover {
+                        padding: 0 0.25rem;
+                        color: #fff;
+                        border-left: 3px solid rgba($color: #fff, $alpha: 0.10);
+                        border-right: 3px solid rgba($color: #fff, $alpha: 0.10);
+                        text-shadow: 1px 1px 0px #000;
+                        font-weight: 600;
+                    }
                 }
-        }
-        #search, #btn {
-            padding: 2px;
-            font-weight: 600;
-            border: none;
-            &:hover {
-                background-color: rgba($color: #fff, $alpha: 1);
-                border: none;
+
+                #search {
+                    width: 100px;
+
+                    &:focus {
+                        outline-color: $color-terciario;
+                        outline-style: solid;
+                        outline-width: 2px;
+                    }
+                }
+
+                #btn {
+                    transition: all 0.2s ease-in-out;
+                    background-color: rgba($color: #fff, $alpha: 0.90);
+                    cursor: pointer;
+                }
+
+                #search,
+                #btn {
+                    padding: 2px;
+                    font-weight: 400;
+                    border: none;
+
+                    &:hover {
+                        background-color: rgba($color: #fff, $alpha: 1);
+                        outline-color: $color-terciario;
+                        outline-style: solid;
+                        outline-width: 1px;
+                    }
+                }
             }
-            &:focus {
-                outline: none;
-            }
-        }
-        #btn {
-            transition: all 0.2s ease-in-out;
-            background-color: rgba($color: #fff, $alpha: 0.90);
-            cursor: pointer;
-            border: none;
         }
     }
 }

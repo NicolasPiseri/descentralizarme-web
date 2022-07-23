@@ -1,0 +1,29 @@
+.contenedor {
+
+    div,
+    .header,
+    .contenido,
+    .sidebar,
+    .footer,
+    .widget-1,
+    .widget-2 {
+        padding: 0.5rem;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    transition: width 0.5s ease;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "header"
+    "contenido"
+    "sidebar"
+    "widget-1"
+    "widget-2"
+    "footer";
+}

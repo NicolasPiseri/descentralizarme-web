@@ -1,90 +1,151 @@
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 576px) {
     .contenedor {
-        grid-template-areas:
-        "header header header header"
-        "contenido contenido contenido contenido"
-        "sidebar sidebar sidebar sidebar"
-        "widget-1 widget-1 widget-2 widget-2"
-        "footer footer footer footer";
-    }
-    .contenedor .sidebar {
-        h3 {
-            margin-bottom: 1rem;
+        .header {
+            padding: 1rem;
+            nav {
+                width: 55%;
+                ul {
+                    @include d-flex (row, space-around, center);
+                    li {
+                        #search {
+                            width: 125px;
+                        }
+                    }
+                }
+            }
         }
-        .section {
-            @include d-flex (row,space-around,center);
+
+        .sidebar {
             h3 {
-                margin-bottom: 1rem 0;
+                font-size: 1.25rem;
             }
-            article{
-                @include d-flex (column,space-between,center);
-                margin: 0 0.5rem;
-                min-height: 155px;
-                min-width: 100px;
-            }
-        }
-    }
-    .contenedor .header {
-        @include d-flex (column,center,center);
-        nav {
-            width: 100%;
-            #search {
-                width: 105px;
+
+            section {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 10px;
+                grid-template-areas:
+                    "articulo-1 articulo-2"
+                    "articulo-3 articulo-4";
             }
         }
-    }
-    .contenedor-articulos {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas:
-        "header"
-        "contenido"
-        "footer";
-        .contenido {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, auto);
-            grid-template-areas:
-            "subtitle subtitle"
-            "articulo-1 articulo-2"
-            "articulo-3 articulo-4"
-            "articulo-5 articulo-6";
+
+        .articulo-1 {
+            grid-area: articulo-1;
+        }
+
+        .articulo-2 {
+            grid-area: articulo-2;
+        }
+
+        .articulo-3 {
+            grid-area: articulo-3;
+        }
+
+        .articulo-4 {
+            grid-area: articulo-4;
         }
     }
 }
 
-@media screen and (max-width: 768px) {
-    .contenedor .sidebar {
-        h3 {
-            margin-bottom: 1rem;
-        }
-        .section {
-            @include d-flex (row,space-around,center);
-            h3 {
-                margin-bottom: 1rem 0;
+@media screen and (min-width: 768px) {
+    .contenedor {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "header header"
+            "contenido contenido"
+            "sidebar sidebar"
+            "widget-1 widget-2"
+            "footer footer";
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    body {
+        background: radial-gradient(circle, $color-secundario 75%, $color-principal 100%);
+    }
+
+    .contenedor {
+        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "header header header header"
+            "contenido contenido contenido sidebar"
+            "widget-1 widget-1 widget-2 sidebar"
+            "footer footer footer footer";
+
+        .header {
+            padding: 1rem;
+            @include d-flex (row, space-between, center);
+
+            nav {
+                width: 60%;
+                @include d-flex (row, space-between, center);
+                ul {
+                    @include d-flex (row, space-around, center);
+                    li {
+                        margin: 0 1rem;
+                    }
+                }
             }
-            article{
-                @include d-flex (column,space-between,center);
-                margin: 0 0.5rem;
-                min-height: 155px;
-                min-width: 100px;
+        }
+
+        .contenido {
+            article {
+                width: 90%;
+            }
+        }
+
+        .sidebar {
+            h3 {
+                font-size: 1rem;
+            }
+
+            section {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(4, auto);
+                gap: 0px;
+                grid-template-areas:
+                    "articulo-1"
+                    "articulo-2"
+                    "articulo-3"
+                    "articulo-4";
+
+                article {
+                    h3 {
+                        font-size: 0.9rem;
+                    }
+
+                    &:hover {
+                        transform: scale(1.01);
+                    }
+                }
+
+            }
+        }
+
+        .widget-1,
+        .widget-2 {
+            &:hover {
+                transform: scale(1.025);
             }
         }
     }
 }
 
-@media screen and (max-width: 576px) {
-    .contenedor-articulos {
-        .contenido {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(7, auto);
-            grid-template-areas:
-            "subtitle"
-            "articulo-1"
-            "articulo-2"
-            "articulo-3"
-            "articulo-4"
-            "articulo-5"
-            "articulo-6";
-        }
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: $color-secundario;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        background-color: $color-secundario;
     }
 }

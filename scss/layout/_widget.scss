@@ -1,0 +1,34 @@
+.contenedor {
+
+    .widget-1,
+    .widget-2 {
+        transition: all 0.3s ease-in-out;
+        height: auto;
+        min-height: 100px;
+        text-align: center;
+        @include d-flex (column, center, center);
+        cursor: pointer;
+
+        h3 {
+            text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+        }
+
+        &:hover {
+            font-size: 1.1rem;
+        }
+    }
+
+    .widget-1 {
+        grid-area: widget-1;
+        background-image: url(../img/bitcoin_widget.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .widget-2 {
+        grid-area: widget-2;
+        background-image: url(../img/ethereum.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}

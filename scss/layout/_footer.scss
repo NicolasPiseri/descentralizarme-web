@@ -1,9 +1,15 @@
-.contenedor .footer {
-    background: #181818;
-    color: #fff;
-    grid-area: footer;
-    a {
-        font-size: 1rem;
-        font-weight: 600;
+.contenedor {
+    .footer {
+        padding: 0 2rem;
+        background: $color-principal;
+        grid-area: footer;
+        text-align: center;
+        @include d-flex (row,flex-start,center);
+        height: 50px;
+
+        a {
+            font-size: 1rem;
+            font-weight: 600;
+        }
     }
 }
