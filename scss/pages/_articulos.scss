@@ -1,56 +1,62 @@
-.contenedor-articulos {
-    width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 20px;
+.contenedorArticulos {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
-    "header"
-    "contenido"
-    "footer";
+        "header"
+        "contenido"
+        "footer";
+
     .contenido {
         display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, auto);
+        grid-gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, auto);
         grid-template-areas:
-        "subtitle subtitle subtitle"
-        "articulo-1 articulo-2 articulo-3"
-        "articulo-4 articulo-5 articulo-6";
+            "subtitle"
+            "articulo-1"
+            "articulo-2"
+            "articulo-3"
+            "articulo-4"
+            "articulo-5"
+            "articulo-6";
         justify-items: center;
         align-items: center;
+
+        article {
+
+            h2 {
+                font-size: 1.30rem;
+            }
+        }
+
         .subtitle {
+            margin: 0;
             text-align: center;
             grid-area: subtitle;
         }
+
         .articulo-1 {
             grid-area: articulo-1;
         }
+
         .articulo-2 {
             grid-area: articulo-2;
         }
+
         .articulo-3 {
             grid-area: articulo-3;
         }
+
         .articulo-4 {
             grid-area: articulo-4;
         }
+
         .articulo-5 {
             grid-area: articulo-5;
         }
+
         .articulo-6 {
             grid-area: articulo-6;
         }
-        article {
-            &:hover {
-                transform: scale(1.02);
-            }
-        }
-        article {
-            width: 100%;
-        }
     }
 }
-

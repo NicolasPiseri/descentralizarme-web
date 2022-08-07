@@ -4,7 +4,7 @@
         background: $color-principal;
         grid-area: footer;
         text-align: center;
-        @include d-flex (row,flex-start,center);
+        @include d-flex (row, flex-start, center);
         height: 50px;
 
         a {

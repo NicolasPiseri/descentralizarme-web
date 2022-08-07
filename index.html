@@ -11,11 +11,13 @@
     <meta name="owner" content="Nicolas Piseri">
     <!--GOOGLE FONTS NUNITO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="./css/main.css">
-    <title>Inicio - Descentralizarme</title>
+    <title>Descentralizarme Blog</title>
 </head>
 
 <body>
@@ -27,7 +29,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./pages/articulos.html">Articulos</a>
+                        <a href="./pages/articulos.html">Artículos</a>
                     </li>
                     <li>
                         <a href="./pages/exchanges.html">Exchanges</a>
@@ -38,20 +40,26 @@
                 </ul>
                 <ul>
                     <li>
-                        <input id="search" type="search" name="search" placeholder="Palabra Clave">
-                        <button id="btn">Buscar</button>
+                        <form target="_blank" action="https://youtu.be/y6120QOlsfU">
+                            <input type="search" id="search" name="search" placeholder="Palabra Clave">
+                            <button type="submit" id="btn">Buscar</button>
+                        </form>
                     </li>
                 </ul>
             </nav>
         </header>
         <!--CONTENIDO-->
         <main class="contenido">
-            <h3>Articulo Destacado</h3>
+            <h3>Artículo Destacado</h3>
             <article>
                 <h2>Hot Wallets vs Cold Wallets</h2>
-                <img src="img/hot-wallet-vs-cold-wallet.jpg" alt="Hot and Cold Crypto Wallet">
-                <p>La forma más sencilla de describir la diferencia entre una cold wallet y una hot wallet es esta: las
-                    hot wallets están conectadas a Internet...</p>
+                <a class="imgHoverA" href="./pages/articles/hot-cold-wallets.html">
+                    <img src="img/hot-wallet-vs-cold-wallet.jpg" alt="Hot Wallets Versus Cold Wallets">
+                    <p class="imgHoverText">Leer Más</p>
+                </a>
+                <p class="extracto">La principal diferencia entre una billetera caliente y una billetera fría es
+                    que las primeras están
+                    conectadas a Internet, mientras que una billetera fría no lo está...</p>
             </article>
         </main>
         <!--ELEMENTOS-->
@@ -59,28 +67,40 @@
             <h3>Entradas Recientes</h3>
             <section class="section">
                 <article class="articulo-1">
-                    <h3>¿Qué es Lemon Cash?</h3>
-                    <img src="img/lemoncash.jpg" alt="Lemon Cash Crypto Exchange">
+                    <a href="./pages/articles/que-es-lemoncash.html">
+                        <h3>¿Qué es Lemon Cash?</h3>
+                        <img src="img/lemoncash.jpg" alt="Tarjeta Crypto Lemon Cash">
+                    </a>
                 </article>
                 <article class="articulo-2">
-                    <h3>¿Cómo funciona Bitcoin?</h3>
-                    <img src="img/bitcoin.jpg" alt="Bitcoin Criptomoneda">
+                    <a href="./pages/articles/como-funciona-bitcoin.html">
+                        <h3>¿Cómo funciona Bitcoin?</h3>
+                        <img src="img/bitcoin.jpg" alt="Bitcoin Criptomoneda">
+                    </a>
                 </article>
                 <article class="articulo-3">
-                    <h3>¿Cómo operar en Binance?</h3>
-                    <img src="img/binance.jpg" alt="Binance Crypto Exchange">
+                    <a href="./pages/articles/como-operar-binance.html">
+                        <h3>¿Cómo operar en Binance?</h3>
+                        <img src="img/binance.jpg" alt="Binance Exchange">
+                    </a>
                 </article>
                 <article class="articulo-4">
-                    <h3>¿Qué es un exchange?</h3>
-                    <img src="img/exchange.jpg" alt="Crypto Exchange">
+                    <a href="./pages/articles/que-es-exchange.html">
+                        <h3>¿Qué es un exchange?</h3>
+                        <img src="img/exchange.jpg" alt="Exchange de Criptomonedas">
+                    </a>
                 </article>
             </section>
         </aside>
         <div class="widget-1">
-            <h3>TODO SOBRE BITCOIN</h3>
+            <a href="./pages/articles/como-funciona-bitcoin.html">
+                <h3>TODO SOBRE BITCOIN</h3>
+            </a>
         </div>
         <div class="widget-2">
-            <h3>ETHEREUM</h3>
+            <a href="./pages/articles/todo-sobre-ethereum.html">
+                <h3>ETHEREUM</h3>
+            </a>
         </div>
         <!--FOOTER-->
         <footer class="footer">

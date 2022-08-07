@@ -1,0 +1,53 @@
+.contenedorArticulo {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "header"
+        "contenido"
+        "sidebar"
+        "footer";
+
+    .contenido {
+        @include d-flex(column, center, flex-start);
+        padding: 1rem;
+
+        .titulo {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+
+        .escritorFecha {
+            font-size: 0.8rem;
+        }
+
+        .descripcion {
+            font-size: 1.25rem;
+        }
+
+        img {
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        h3 {
+            color: $color-terciario;
+            padding: 0;
+            padding-left: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 1rem;
+            list-style: inside;
+
+            li {
+                font-weight: bold;
+            }
+        }
+    }
+}
